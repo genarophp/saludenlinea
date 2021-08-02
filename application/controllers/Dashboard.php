@@ -15,12 +15,12 @@ class Dashboard extends CI_Controller {
 	{	
 		if ($this->session->userdata('login')) {
 
-                $us_pnombre = $this->session->userdata('us_pnombre');
-                $us_papellido = $this->session->userdata('us_papellido');   
-                $us_email = $this->session->userdata('us_email');   
-                $us_identificacion = $this->session->userdata('us_identificacion');  
-              
-                $this->load->view('dashboard_view',  array('nombre' => $us_pnombre." ".$us_papellido,
+            $us_pnombre         = $this->session->userdata('us_pnombre');
+            $us_papellido       = $this->session->userdata('us_papellido');   
+            $us_email           = $this->session->userdata('us_email');   
+            $us_identificacion  = $this->session->userdata('us_identificacion');  
+            
+            $this->load->view('dashboard_view',  array('nombre' => $us_pnombre." ".$us_papellido,
                                                             'email' => $us_email,
                                                             'identificacion' => $us_identificacion));
 		}else{
@@ -28,38 +28,20 @@ class Dashboard extends CI_Controller {
 		}
 	}	
 
-    public function documentos()
-	{	
-        if ($this->session->userdata('login')) {
+    // public function documentos()
+	// {	
+    //     if ($this->session->userdata('login')) {
 
-            $us_pnombre         = $this->session->userdata('us_pnombre');
-            $us_papellido       = $this->session->userdata('us_papellido');   
-            $us_email           = $this->session->userdata('us_email');   
-            $us_identificacion  = $this->session->userdata('us_identificacion');  
+    //         $us_pnombre         = $this->session->userdata('us_pnombre');
+    //         $us_papellido       = $this->session->userdata('us_papellido');   
+    //         $us_email           = $this->session->userdata('us_email');   
+    //         $us_identificacion  = $this->session->userdata('us_identificacion');  
           
-            $this->load->view('Documentos_view',  array('nombre'         => $us_pnombre." ".$us_papellido,
-                                                        'email'          => $us_email,
-                                                        'identificacion' => $us_identificacion));
-        }else{
-            redirect(site_url(""));
-        }
-    }
-
-    public function usuarios()
-	{	
-        if ($this->session->userdata('login')) {
-
-            $us_pnombre         = $this->session->userdata('us_pnombre');
-            $us_papellido       = $this->session->userdata('us_papellido');   
-            $us_email           = $this->session->userdata('us_email');   
-            $us_identificacion  = $this->session->userdata('us_identificacion');  
-          
-            $this->load->view('usuarios_view', array('nombre'         => $us_pnombre." ".$us_papellido,
-                                                     'email'          => $us_email,
-                                                     'identificacion' => $us_identificacion));
-        }else{
-            redirect(site_url(""));
-        }
-    }
-
+    //         $this->load->view('Documentos_view',  array('nombre'         => $us_pnombre." ".$us_papellido,
+    //                                                     'email'          => $us_email,
+    //                                                     'identificacion' => $us_identificacion));
+    //     }else{
+    //         redirect(site_url(""));
+    //     }
+    // }
 }

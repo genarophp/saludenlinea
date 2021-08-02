@@ -1,10 +1,12 @@
 <?php
 
-class Dashboard_model extends CI_Model {
+class Documentos_model extends CI_Model {
 
     function __construct() {
         parent::__construct();
         $this->db = $this->load->database('default', TRUE); 
     }
+
 }
+
 ?>

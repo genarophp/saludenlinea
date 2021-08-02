@@ -20,10 +20,9 @@ var KTDashboard = function() {
                     //console.log(resultado);
                     window.location.href = "../index.php";
                 }
-    
             })
             .fail(function() {
-                //console.log("error");
+                console.log("error");
             });
         });
 	}
