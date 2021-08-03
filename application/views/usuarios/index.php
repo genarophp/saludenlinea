@@ -7,8 +7,8 @@
 <?php else: ?>
     <?php if($flag == 1 or $flag == 2): ?>
     <div class="alert alert-success alert-dismissible fade show" role="alert">
-      <strong>Exito!</strong> <?php if($flag == 1 ): ?> Se Guardo / actualizo correctamente<?php endif; ?>
-      <?php if($flag == 2 ): ?> Se Elimino correctamente<?php endif; ?>
+      <strong>¡Éxito! &nbsp</strong> <?php if($flag == 1 ): ?> El usuario se guardó correctamente<?php endif; ?>
+      <?php if($flag == 2 ): ?> El usuario se eliminó correctamente<?php endif; ?>
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>

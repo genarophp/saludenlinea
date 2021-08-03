@@ -32,5 +32,5 @@
             <td> <?php echo $usuario->nombresede ?> </td>
         </tr>
     </tbody>
-    <div> <a class="btn btn-info" href="<?php echo base_url() ?>index.php/usuarios/index"> Volver atrás </a> </div>
 </table>
+<div> <a class="btn btn-info" href="<?php echo base_url() ?>index.php/usuarios/index"> Volver atrás </a> </div>
