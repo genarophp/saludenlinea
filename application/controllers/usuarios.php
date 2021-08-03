@@ -118,7 +118,7 @@ class Usuarios extends CI_Controller {
         if($this->input->post()){
             
             $identificacion     = $this->input->post('identificacion');
-            $contrasena         = $this->input->post('contrasena');
+            $contrasena         = md5($this->input->post('contrasena'));
             $pnombre            = $this->input->post('pnombre');
             $snombre            = $this->input->post('snombre');
             $papellido          = $this->input->post('papellido');
