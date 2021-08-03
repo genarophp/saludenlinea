@@ -77,7 +77,7 @@ $db['default'] = array(
 	'dsn'  => 'mysql:host=localhost; dbname=eps; charset=utf8;',
 	'hostname' => 'localhost',
 	'username' => 'root',
-	'password' => 'root',
+	'password' => '',
 	'database' => 'EPS',
 	'dbdriver' => 'pdo',
 	'dbprefix' => '',

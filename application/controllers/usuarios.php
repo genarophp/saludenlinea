@@ -9,7 +9,7 @@ class Usuarios extends CI_Controller {
         $this->form_validation->set_message('numeric', '%s debe ser numérico.');
     }
 
-    public function index() {
+    public function index($flag = 0) {
 
         if ($this->session->userdata('login')) {
 
@@ -22,9 +22,13 @@ class Usuarios extends CI_Controller {
             $us_email           = $this->session->userdata('us_email');   
             $us_identificacion  = $this->session->userdata('us_identificacion');
             
+            
+
             $this->load->view('usuarios/header', array( 'nombre'         => $us_pnombre." ".$us_papellido,
                                                         'email'          => $us_email,
-                                                        'identificacion' => $us_identificacion));
+                                                        'identificacion' => $us_identificacion,
+                                                        'flag'           => $flag,
+                                                    ));
             $this->load->view('usuarios/index', $data);
             $this->load->view('usuarios/footer');            
 		}else{
@@ -97,9 +101,11 @@ class Usuarios extends CI_Controller {
                 $data['nombresede']     = null;
             }
 
+            
             $this->load->view('usuarios/header', array( 'nombre'         => $us_pnombre." ".$us_papellido,
                                                         'email'          => $us_email,
-                                                        'identificacion' => $us_identificacion));
+                                                        'identificacion' => $us_identificacion,
+                                                        ));
             $this->load->view('usuarios/guardar', $data);
             $this->load->view('usuarios/footer');
 
@@ -110,6 +116,7 @@ class Usuarios extends CI_Controller {
 
     public function guardar_post($id=null){
         if($this->input->post()){
+            
             $identificacion     = $this->input->post('identificacion');
             $contrasena         = $this->input->post('contrasena');
             $pnombre            = $this->input->post('pnombre');
@@ -147,7 +154,9 @@ class Usuarios extends CI_Controller {
                                         $estado,
                                         $nombresede
                                         );
-            redirect('usuarios/index');
+            $flag = 1; 
+            redirect('usuarios/index/'.$flag);
+
             }else{
                 $data = array();
                 $data['id']             = $id;
@@ -176,6 +185,9 @@ class Usuarios extends CI_Controller {
     public function eliminar($id){
         $this->load->model('user_model');
         $this->user_model->eliminar($id);
-        redirect('usuarios/index');
+         $flag = 2; 
+            
+        redirect('usuarios/index/'.$flag);
+        
     }
 }

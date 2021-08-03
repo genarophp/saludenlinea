@@ -1,4 +1,4 @@
-<table class="table table-responsive" style="background-color: #FFFFFF;">
+<table class="table table-responsive" style="background-color: #FFFFFF;" >
     <thead>
         <tr>
             <th> Identificación </th>

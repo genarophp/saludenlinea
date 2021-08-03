@@ -2,7 +2,23 @@
 
 <p> <a class="btn btn-success" href="<?php echo base_url() ?>index.php/usuarios/guardar"> Crear nuevo usuario </a> </p>
 <?php if (count($usuarios)): ?>
-<table class="table tableborder" style="background-color: #FFFFFF;">
+<br>
+<?php if($flag == 0): ?>
+<?php else: ?>
+    <?php if($flag == 1 or $flag == 2): ?>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Exito!</strong> <?php if($flag == 1 ): ?> Se Guardo / actualizo correctamente<?php endif; ?>
+      <?php if($flag == 2 ): ?> Se Elimino correctamente<?php endif; ?>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <?php endif; ?>
+<?php endif; ?>
+<br>
+
+<table class="table tableborder" style="background-color: #FFFFFF;" id="table_id">
     <thead>
     <tr>
         <th>Identificación</th>
@@ -54,16 +70,17 @@
 <p> No hay Usuarios </p>
 <?php endif; ?>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
+
     $(".eliminar_usuario").each(function() {
         var href = $(this).attr('href');
         $(this).attr('href', 'javascript:void(0)');
         $(this).click(function() {
             if (confirm("¿Seguro desea eliminar este usuario?")) {
-            l   ocation.href = href;
+                location.href = href;
             }
         });
     });
-</script>
+</script> -->
 
         
