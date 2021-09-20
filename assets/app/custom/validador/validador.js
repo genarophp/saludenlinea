@@ -80,7 +80,7 @@ var Validador = function () {
 			// Submit valid form
 			submitHandler: function (form) {
 				
-			}
+			},
 		});   
 	}
 	// Private Functions
@@ -320,13 +320,22 @@ var Validador = function () {
 							var Derechos = resultado.responseMessageOut.body.response.validadorResponse.Derechos;
 							var Afiliado  = resultado.responseMessageOut.body.response.validadorResponse.DsAfiliado.Afiliado;
 							
-							// var hoy = new Date().toISOString().slice(0, 10)
-							// var fechaActual = new Date(hoy, 'Ymd');
+							let date 	= new Date()
+							let day 	= date.getDate()
+							let month 	= date.getMonth() + 1
+							let year 	= date.getFullYear()
 
+							if(month < 10){
+								var hoy = year+'0'+month+''+day
+							  }else{
+								var hoy = year+''+month+''+day
+							  }								
+							
 							//Validación para personas en periodo de protección laboral
-							if(Afiliado.EstadoDescripcion == 'Retirado') //&&  Afiliado.FechaDesafiliacion <= fechaActual && Afiliado.FechaRetiro >= fechaActual
+							if(Afiliado.EstadoDescripcion == 'Retirado' && Afiliado.FechaRetiro >= hoy && hoy <= Afiliado.FechaRetiro)
+							  												//30/10/2021 >= 20/09/2021   		20/09/2021 <= 30/11/2021		
 							{
-								//Valida que el encuentre al Afiliado de Comfenalco							
+								//Valida que el encuentre ael afiliado está en periodo de Proteción Laboral						
 									var mens = 'PROTECCIÓN LABORAL';
 									var rowNode = tableValidadorServicios
 									.row.add([checkUndefinedEmpty(typeof Derechos.DerechoPrestacion== 'undefined'? false : Derechos.DerechoPrestacion ) === false ? 'N/A' : 'PROTECCION_LABORAL',
@@ -336,9 +345,20 @@ var Validador = function () {
 									.draw()
 									.node();
 							}
+							else if(Afiliado.EstadoDescripcion == 'Retirado' && Afiliado.FechaRetiro < hoy){
+								//Valida terminación de protección laboral						
+								var mens = 'NO';
+								var rowNode = tableValidadorServicios
+								.row.add([checkUndefinedEmpty(typeof Derechos.DerechoPrestacion== 'undefined'? false : Derechos.DerechoPrestacion ) === false ? 'N/A' : 'NO',
+										  checkUndefinedEmpty(typeof Derechos.Programa== 'undefined'? false : Derechos.Programa ) === false ? 'N/A' : Derechos.Programa,
+										  checkUndefinedEmpty(typeof Derechos.DescripcionPrograma== 'undefined'? false : Derechos.DescripcionPrograma ) === false ? 'N/A' : Derechos.DescripcionPrograma,
+										  checkUndefinedEmpty(typeof Derechos.MENSAJE== 'undefined'? false : Derechos.MENSAJE ) === false ? 'N/A' : 'El usuario con tipo ' + Afiliado.TipoDocAfiliado + ' y numero ' + Afiliado.IDTrabajador + ' NO tiene derecho a prestación de servicios, finalizó Periodo de protección laboral el ' + Afiliado.FechaRetiro])
+								.draw()
+								.node();
+							}
 							//Si no está en periodo de protección laboral
 							else{
-								//Valida que se encuentre al Afiliado de Comfenalco	
+								//Valida que se encuentre al Afiliado de Comfenalco
 									var rowNode = tableValidadorServicios
 									.row.add([checkUndefinedEmpty(typeof Derechos.DerechoPrestacion== 'undefined'? false : Derechos.DerechoPrestacion ) === false ? 'N/A' : Derechos.DerechoPrestacion,
 											  checkUndefinedEmpty(typeof Derechos.Programa== 'undefined'? false : Derechos.Programa ) === false ? 'N/A' : Derechos.Programa,

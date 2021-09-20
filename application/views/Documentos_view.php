@@ -234,47 +234,151 @@
 
 								<div class="cd-faq__items">
 									<ul id="basics" class="cd-faq__group">
-										<li class="cd-faq__title"><h2>Preguntas Frecuentes</h2></li>
+										<li class="cd-faq__title">
+											<h2>Preguntas Frecuentes</h2>
+										</li>
+
 										<li class="cd-faq__item">
-											<a class="cd-faq__trigger" href="#0"><span>¿Qué debo hacer si no puedo autenticarme en la aplicación?</span></a>
+											<a class="cd-faq__trigger" href="#0"><span>¿Cómo solicito un usuario para la Salud en Línea?</span></a>
 											<div class="cd-faq__content">
-									<div class="text-component">
-										<p>Debes validar si el usuario y contraseña son los mismos que te enviaron por correo electrónico, de lo contrario te debes comunicar con el administrador <b>gaparedesh@epscomfenalcovalle.com.co</b> para solicitar restablecer contraseña.</p>
-									</div>
+												<div class="text-component">
+													<p>1. Debes radicar <b>SIRES</b> a través de la URL: <a href="https://virtual.comfenalcovalle.com.co/siresprodu/jsp/login.jsp" target="_blank"><b>SIRES</b></a>
+														  solicitando creación de usuario en la aplicación Salud en Línea.<br><br>
+
+														2.	Con el número de <b>SIRES</b> arrojado por el sistema, se debe diligenciar el formato <b>FTO-GTC-OTE-06 V1 Accesos al Sistema EPS.xls</b> 
+															con firma escaneada y enviarlo al área de  Contrataciones (<b>paguerreoa@epscomfenalcovalle.com.co</b>) para validar contratación 
+															vigente con el Prestador, Call center o empresa que preste servicios a EPS Comfenalco Valle.<br><br>
+
+														3.	Si Contrataciones no aprueba, se debe notificar a  Grupo de Soporte Tecnológico (<b>tecnologia@epscomfenalcovalle.com.co</b>) para atención del SIRES.<br><br>
+														
+														4.	Una vez validado y firmado por Contrataciones, el formato será enviado a Gobierno de la información (<b>sec_info@comfenalcovalle.com.co</b>) para su autorización y firma.<br><br>
+
+														5.	Gobierno de la información envía el formato firmado al Grupo de Soporte Tecnológico (<b>tecnologia@epscomfenalcovalle.com.co</b>) para creación del(os) usuario(s) relacionados en el formato.<br><br>
+
+														6.	Soporte Tecnológico atiende la creación del usuario y a través de <b>SIRES</b> notifica al usuario para su validación y calificación de la atención. El usuario y la contraseña será enviada al correo del usuario referenciado en el formato.
+														<div class="kt-form__actions">
+															<a class="btn btn-primary" style="font-size: 16px;" href="<?php echo base_url(); ?>assets/media/docs/FTO-GTC-OTE-06 V1 Accesos al Sistema EPS.xls" target="_blank">Descargar formato FTO-GTC-OTE-06 V1 Accesos al Sistema EPS.xls</a>
+														</div>
+													</p>													
+												</div>
+											</div> <!-- cd-faq__content -->
+										</li>
+
+										<li class="cd-faq__item">
+											<a class="cd-faq__trigger" href="#0"><span>¿Cómo solicito usuario para aplicación SIRES?</span></a>
+											<div class="cd-faq__content">
+												<div class="text-component">
+													<p>1. Si el usuario no tiene usuario SIRES, debe diligenciar el formato <b>FTO-GTC-OTE-06 V1 Accesos al Sistema EPS.xls</b> 
+													      con firma escaneada y enviarlo al área de  Contrataciones (<b>paguerreoa@epscomfenalcovalle.com.co</b>) para validar 
+														  contratación vigente con el Prestador, Call center o empresa que preste servicios a EPS Comfenalco Valle y radica el 
+														  <b>SIRES</b> para adjuntar el número en el formato.<br><br>
+
+														2.	Una vez validado y firmado por Contrataciones, el formato será enviado a Gobierno de la información (<b>sec_info@comfenalcovalle.com.co</b>) 
+														    para su autorización y firma.<br><br>
+
+														3.	Gobierno de la información envía el formato firmado al Grupo de Soporte Tecnológico (<b>tecnologia@epscomfenalcovalle.com.co</b>) para creación 
+														    del(os) usuario(s) relacionados en el formato.<br><br>
+
+														4.	Soporte Tecnológico atiende la creación de usuarios y a través de <b>SIRES</b> envía notificación al usuario para su validación y calificación 
+														    de la atención.  
+															El usuario y la contraseña será enviada al correo del usuario referenciado en el formato.
+
+														<div class="kt-form__actions">
+															<a class="btn btn-primary" style="font-size: 16px;" href="<?php echo base_url(); ?>assets/media/docs/FTO-GTC-OTE-06 V1 Accesos al Sistema EPS-1.xls" target="_blank">Descargar formato FTO-GTC-OTE-06 V1 Accesos al Sistema EPS.xls</a>
+														</div>
+													</p>
+														<img src="<?php echo base_url(); ?>assets/media/docs/creacion_usuario.png" />
+												</div>
 											</div> <!-- cd-faq__content -->
 										</li>
 
 										<li class="cd-faq__item">
 											<a class="cd-faq__trigger" href="#0"><span>¿Cómo puedo cambiar/recuperar contraseña?</span></a>
 											<div class="cd-faq__content">
-									<div class="text-component">
-										<p>Debes escribir al administrador <b>gaparedesh@epscomfenalcovalle.com.co</b> de la aplicación para recuperar la contraseña.</p>
-									</div>
+												<div class="text-component">
+													<p>1. Debes radicar un SIRES a través de la URL <a href="https://virtual.comfenalcovalle.com.co/siresprodu/jsp/login.jsp" target="_blank"><b>SIRES</b></a>
+														  y solicitar restablecer la contraseña en Salud en Línea, indicando nombre de usuario y correo electrónico con los que está intentando ingresar a la aplicación. 
+														  No requiere formato.
+													</p>
+												</div>
+											</div> <!-- cd-faq__content -->
+										</li>
+
+										<li class="cd-faq__item">
+											<a class="cd-faq__trigger" href="#0"><span>¿Cómo puedo activar/inactivar un usuario de la aplicación?</span></a>
+											<div class="cd-faq__content">
+												<div class="text-component">
+													<p>1. Debes radicar un SIRES a través de la URL <a href="https://virtual.comfenalcovalle.com.co/siresprodu/jsp/login.jsp" target="_blank"><b>SIRES</b></a>
+														  indicando el nombre completo y el correo del usuario.
+													</p>
+												</div>
 											</div> <!-- cd-faq__content -->
 										</li>
 
 										<li class="cd-faq__item">
 											<a class="cd-faq__trigger" href="#0"><span>¿Qué pasa si no sale información del documento consultado?</span></a>
 											<div class="cd-faq__content">
-									<div class="text-component">
-										<p>Se pueden dar 2 escenarios; el primero que la persona no sea un afiliado de la EPS o que el # de documento no sea el correcto; 
-											segundo, que debido a una falla técnica no se pueda consultar la información, por lo que se debe solicitar al grupo de soporte tecnológico la revisión.</p>
-									</div>
+												<div class="text-component">
+													<p>
+														1. Se debe validar que el tipo y número de documento a consultar sean correctos.<br><br>
+
+														2. Por intermitencias en el serivicio, por favor intentar de nuevo unos 5 minutos después.<br><br>
+
+														3. En caso de que no se visualice información de la consulta  y se tenga la certeza de que el documento consultado 
+														   se trata de un afiliado Activo a la EPS, se debe radicar un SIRES a través de la URL <a href="https://virtual.comfenalcovalle.com.co/siresprodu/jsp/login.jsp" target="_blank"><b>SIRES</b></a>
+														   indicando el tipo y número de documento consultado para validar el caso.
+													</p>
+												</div>
+											</div>
+										</li>
+										
+										<li class="cd-faq__item">
+											<a class="cd-faq__trigger" href="#0"><span>¿Qué pasa si la información arrojada por Salud en Línea es diferente a la de Registro Cliente?</span></a>
+											<div class="cd-faq__content">
+												<div class="text-component">
+													<p>Se debe radicar un SIRES a través de la URL <a href="https://virtual.comfenalcovalle.com.co/siresprodu/jsp/login.jsp" target="_blank"><b>SIRES</b></a>
+													   indicando el tipo y número de documento consultado y explicando detalladamente el caso para validación y solución del mismo.</p>
+												</div>
 											</div> <!-- cd-faq__content -->
 										</li>
 
 										<li class="cd-faq__item">
+											<a class="cd-faq__trigger" href="#0"><span>¿Cuál es la contingencia para el usuario en caso de que el servicio de validación de derechos no esté disponible?</span></a>
+											<div class="cd-faq__content">
+												<div class="text-component">
+													<p>Se debe consultar la información en la base de datos de población con la que cuenta, teniendo en cuenta que dicha información está con un día de 
+													   retraso.</p>
+												</div>
+											</div> <!-- cd-faq__content -->
+										</li>
+
+										<li class="cd-faq__item">
+											<a class="cd-faq__trigger" href="#0"><span>¿Qué significa el mensaje cuando se consulta una persona con documento Permanencia Especial?</span></a>
+											<div class="cd-faq__content">
+												<div class="text-component">
+													<p>
+														Es un problema técnico al consultar número de documentos de más de 12 caracteres; se está trabajando en solución del mismo.<br>
+
+														Cuando suceda esto se debe radicar un SIRES  a través de la URL <a href="https://virtual.comfenalcovalle.com.co/siresprodu/jsp/login.jsp" target="_blank"><b>SIRES</b></a>
+														Indicando el documento para validar el caso.
+													</p>
+													<img src="<?php echo base_url(); ?>assets/media/docs/pe.png" />
+												</div>
+											</div> <!-- cd-faq__content -->
+										</li>										
+
+										<li class="cd-faq__item">
 											<a class="cd-faq__trigger" href="#0"><span>¿Qué significa periodo de protección laboral?</span></a>
 											<div class="cd-faq__content">
-									<div class="text-component">
-										<p>El período de protección laboral consiste en que una vez suspendido el pago de la cotización como consecuencia 
-										de la finalización de la relación laboral o de la pérdida de la capacidad de pago del trabajador independiente, 
-										el trabajador y su núcleo familiar gozarán de los beneficios del plan obligatorio de salud hasta por treinta (30) días más, 
-										contados a partir de la fecha de la desafiliación, siempre y cuando haya estado afiliado al Sistema como mínimo los doce meses anteriores, 
-										para lo cual debe tenerse en cuenta que dicha afiliación debe haber sido en forma continua e ininterrumpida. 
-										Cuando el usuario lleve cinco (5) años o más de afiliación continua a una misma Entidad Promotora de Salud, 
-										tendrá derecho a un período de protección laboral de tres (3) meses, contados a partir de la fecha de su desafiliación.</p>
-									</div>
+												<div class="text-component">
+													<p>El período de protección laboral consiste en que una vez suspendido el pago de la cotización como consecuencia 
+													de la finalización de la relación laboral o de la pérdida de la capacidad de pago del trabajador independiente, 
+													el trabajador y su núcleo familiar gozarán de los beneficios del plan obligatorio de salud hasta por treinta (30) días más, 
+													contados a partir de la fecha de la desafiliación, siempre y cuando haya estado afiliado al Sistema como mínimo los doce meses anteriores, 
+													para lo cual debe tenerse en cuenta que dicha afiliación debe haber sido en forma continua e ininterrumpida. 
+													Cuando el usuario lleve cinco (5) años o más de afiliación continua a una misma Entidad Promotora de Salud, 
+													tendrá derecho a un período de protección laboral de tres (3) meses, contados a partir de la fecha de su desafiliación.</p>
+												</div>
 											</div> <!-- cd-faq__content -->
 										</li>
 									</ul> <!-- cd-faq__group -->
@@ -285,8 +389,14 @@
 											<a class="cd-faq__trigger" href="#0"><span>¿Cómo puedo solicitar soporte de la aplicación?</span></a>
 											<div class="cd-faq__content">
 									<div class="text-component">
-										<p>Te puedes comunicar con nuesto grupo de <b>Soporte Tecnológico</b> al celular <b>3207783553</b>.<br>
-										Los ingenieros de soporte validarán tu caso para dar solución o escalarlo en caso de requerir un acompamiento adicional en la resolución de tu caso.</p>
+										<p>A través de la plataforma <a href="https://virtual.comfenalcovalle.com.co/siresprodu/jsp/login.jsp" target="_blank"><b>SIRES</b></a>
+										   puedes solicitar ayuda para:<br><br>
+										    •	Creación o eliminación de usuario (Requiere Formato)<br>
+											•	Cambio de contraseña<br>
+											•	Fallo de la aplicación<br>
+											•	Error interno<br>
+											•	Solicitud de orientación con el manejo de Salud en Línea
+									</p>
 									</div>
 											</div> <!-- cd-faq__content -->
 										</li>
@@ -297,11 +407,13 @@
 									<div class="text-component">
 										<p>El grupo de <b>Soporte Técnológico</b> estará disponible para atender casos en el siguiente horario:</p><br>
 										
-										<p>Lunes: 		de 8:00 a.m. a 5:00 p.m.</p>
-										<p>Martes: 		de 8:00 a.m. a 5:00 p.m.</p>
-										<p>Miércoles: 	de 8:00 a.m. a 5:00 p.m.</p>
-										<p>Jueves: 		de 8:00 a.m. a 5:00 p.m.</p>
-										<p>Viernes: 	de 8:00 a.m. a 5:00 p.m.</p>
+										<p>Lunes: 		de 7:00 a.m. a 5:00 p.m.</p>
+										<p>Martes: 		de 7:00 a.m. a 5:00 p.m.</p>
+										<p>Miércoles: 	de 7:00 a.m. a 5:00 p.m.</p>
+										<p>Jueves: 		de 7:00 a.m. a 5:00 p.m.</p>
+										<p>Viernes: 	de 7:00 a.m. a 5:00 p.m.</p>
+
+										<p>Días del año sin provisión de soporte: sábados, domingos y festivos.</p>
 									</div>
 											</div> <!-- cd-faq__content -->
 										</li>
@@ -325,21 +437,61 @@
 												<p><b>Salud en Línea</b> es la aplicación web que permite a todos los usuarios consultar en tiempo real si un afiliado tiene derecho o no a prestación de servicios de EPS Comfenalco.</p>
 												<p>El soporte de la aplicación está dado por el grupo de <b>Soporte Tecnológico</b></p>
 												<p>Se brindará ayuda al usuario en caso de consultas sobre a aplicación o atención de incidentes.</p>
-												<p>Se contemplan 4 niveles de atención de incidentes:<br><br>
-													UNO (1)	<b>Impacto crítico al negocio:</b>	La totalidad del sistema queda inoperante, o impide de manera total la ejecución de los procesos.<br><br>
-													DOS (2)	<b>Impacto significativo al negocio:</b> El uso de algunos de los programas soportados se detiene bajo ciertas condiciones, o el sistema, arroja resultados que impiden la continuidad de algunas operaciones o se presenta serio impacto en la productividad de Comfenalco Valle EPS.<br><br>
-													TRES (3) <b>Algún impacto al negocio:</b> Al ejecutar algunos de los programas soportados, no funcionan adecuadamente alguna(s) funcionalidad(es) o sus resultados no corresponden con el alcance de la funcionalidad, afectando en alguna medida los datos, la productividad, o el nivel de servicio, existiendo alternativas disponibles que mitigan total o parcialmente el posible impacto generado.<br><br>
-													CUATRO (4) <b>Impacto mínimo al negocio:</b> En el uso de programas soportados, se identifican fallas que no afectan la operación cotidiana de Comfenalco Valle EPS o no afectan un proceso crítico de funcionalidad. Incluye errores de presentación, documentación y ayudas.<br><br>
+												<p>El tiempo de respuesta se refiere al tiempo entre el momento que se recibe el reporte del incidente y 
+												   se envía la primera notificación por parte de la herramienta de gestión de Comfenalco Valle EPS indicando
+												   el número de servicio y el grupo asignado para la atención del incidente.</p>
+												<p>
+													<b>Niveles de atención:</b><br><br>
+													  <b>Incidente:</b>	Cualquier evento que interrumpa el funcionamiento normal de un servicio afectando ya sea a uno, 
+													     a un grupo o a todos los usuarios de un servicio, un incidente se puede tomar como la reducción en la calidad 
+														 de un servicio tecnológico. Un incidente es cualquier cosa que interrumpe la continuidad del negocio.<br><br>
+													  <b>Petición:</b>En primer lugar no es una interrupción de un servicio, por lo general (pero no necesariamente) 
+													     es una solicitud de algo nuevo, como información o acceso; puede tomarse como una petición de un usuario 
+														 solicitando información, asesoramiento, un cambio estándar o acceso a un servicio tecnológico.
 												</p>
-												<p>El tiempo de respuesta se refiere al tiempo entre el momento que se recibe el reporte del incidente y se envía la primera notificación por parte de la herramienta de gestión de Comfenalco Valle EPS indicando el número de servicio y el grupo asignado para la atención del incidente.</p>
-												<p><b>Tiempos de respuesta:</b><br><br>
-													UNO (1)	1 Hora - 10 Horas<br><br>
-													DOS (2)	2 Horas	- 16 Horas<br><br>
-													TRES (3) 4 Horas - 30 Horas<br><br>
-													CUATRO (4) 8 Horas - 42 Horas
-												</p>													
-												<img src="<?php echo base_url(); ?>assets/media/docs/modelo.png" />
-												
+													<b>Tiempo de atención:</b><br><br>
+													<table class="table table-striped- table-bordered table-hover table-checkable">
+														<tr>
+															<th>Gravedad</th>
+															<th>Tiempo de Respuesta Nivel 1</th>
+															<th>Tiempo Escalamiento a Nivel 2</th>
+															<th>Tiempo de Respuesta Nivel 2</th>
+															<th>Tiempo de Solución o Entrega de Plan de Solución</th>
+														</tr>
+														<tr>
+															<td>UNO (1)</td>
+															<td>3 Horas</td>
+															<td>30 minutos</td>
+															<td>3 Horas</td>
+															<td>3 Horas</td>
+														</tr>
+														<tr>
+															<td>DOS (2)</td>
+															<td>3 Horas</td>
+															<td>30 minutos</td>
+															<td>3 Horas</td>
+															<td>3 Horas</td>
+														</tr>
+														<tr>
+															<td>TRES (3)</td>
+															<td>3 Horas</td>
+															<td>30 minutos</td>
+															<td>3 Horas</td>
+															<td>3 Horas</td>
+														</tr>
+														<tr>
+															<td>CUATRO (4)</td>
+															<td>3 Horas</td>
+															<td>30 minutos</td>
+															<td>3 Horas</td>
+															<td>3 Horas</td>
+														</tr>
+													</table><br><br>
+												<b>Flujo Soporte</b><br><br>
+												<img src="<?php echo base_url(); ?>assets/media/docs/atencion_soporte.png" />
+
+												<b>Flujo creación de usuarios</b><br><br>
+												<img src="<?php echo base_url(); ?>assets/media/docs/creacion_usuario.png" />
 											</div>
 										</div> <!-- cd-faq__content -->
 									</li>										
