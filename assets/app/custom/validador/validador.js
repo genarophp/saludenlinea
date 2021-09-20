@@ -385,6 +385,9 @@ var Validador = function () {
 															checkUndefinedEmpty(typeof Afiliado[z].FechaNacimiento== 'undefined'? false : Afiliado[z].FechaNacimiento) === false ? 'N/A' : Afiliado[z].FechaNacimiento,
 															checkUndefinedEmpty(typeof Afiliado[z].Estrato== 'undefined'? false : Afiliado[z].Estrato ) === false ? 'N/A' : Afiliado[z].Estrato,
 															checkUndefinedEmpty(typeof Afiliado[z].ClaseAfiliacion== 'undefined'? false : Afiliado[z].ClaseAfiliacion ) === false ? 'N/A' : Afiliado[z].ClaseAfiliacion,
+															checkUndefinedEmpty(typeof Afiliado[z].FechaAfiliacion== 'undefined'? false :  Afiliado[z].FechaAfiliacion) === false ? 'N/A' : Afiliado[z].FechaAfiliacion,
+															checkUndefinedEmpty(typeof Afiliado[z].FechaDesafiliacion== 'undefined'? false :Afiliado[z].FechaDesafiliacion  ) === false ? 'N/A' : Afiliado[z].FechaDesafiliacion,
+															checkUndefinedEmpty(typeof Afiliado[z].FechaRetiro== 'undefined'? false :  Afiliado[z].FechaRetiro) === false ? 'N/A' : Afiliado[z].FechaRetiro,
 															checkUndefinedEmpty(typeof Afiliado[z].Sexo== 'undefined'? false : Afiliado[z].Sexo ) === false ? 'N/A' : Afiliado[z].Sexo,
 															checkUndefinedEmpty(typeof Afiliado[z].SedeCapita== 'undefined'? false : Afiliado[z].SedeCapita ) === false ? 'N/A' : Afiliado[z].SedeCapita,
 															checkUndefinedEmpty(typeof Afiliado[z].email== 'undefined'? false :  Afiliado[z].email) === false ? 'N/A' : Afiliado[z].email,
@@ -400,7 +403,6 @@ var Validador = function () {
 															checkUndefinedEmpty(typeof Afiliado[z].IDEmpresa== 'undefined'? false :  Afiliado[z].IDEmpresa) === false ? 'N/A' : Afiliado[z].IDEmpresa,
 															checkUndefinedEmpty(typeof Afiliado[z].TidEmpresa== 'undefined'? false : Afiliado[z].TidEmpresa ) === false ? 'N/A' : Afiliado[z].TidEmpresa,
 															checkUndefinedEmpty(typeof Afiliado[z].TIdAfiliado== 'undefined'? false : Afiliado[z].TIdAfiliado ) === false ? 'N/A' : Afiliado[z].TIdAfiliado,
-															checkUndefinedEmpty(typeof Afiliado[z].FechaAfiliacion== 'undefined'? false :  Afiliado[z].FechaAfiliacion) === false ? 'N/A' : Afiliado[z].FechaAfiliacion,
 															checkUndefinedEmpty(typeof Afiliado[z].Estado== 'undefined'? false :  Afiliado[z].Estado) === false ? 'N/A' : Afiliado[z].Estado,
 															checkUndefinedEmpty(typeof Afiliado[z].IdEntidad== 'undefined'? false : Afiliado[z].IdEntidad ) === false ? 'N/A' : Afiliado[z].IdEntidad,
 															checkUndefinedEmpty(typeof Afiliado[z].Direccion== 'undefined'? false :  Afiliado[z].Direccion) === false ? 'N/A' : Afiliado[z].Direccion,
@@ -419,13 +421,11 @@ var Validador = function () {
 															checkUndefinedEmpty(typeof Afiliado[z].DirEmpresa == 'undefined'? false : Afiliado[z].DirEmpresa ) === false ? 'N/A' : Afiliado[z].DirEmpresa,
 															checkUndefinedEmpty(typeof Afiliado[z].IdHistoria09== 'undefined'? false : Afiliado[z].IdHistoria09 ) === false ? 'N/A' : Afiliado[z].IdHistoria09,
 															checkUndefinedEmpty(typeof Afiliado[z].IdHistoria12== 'undefined'? false : Afiliado[z].IdHistoria12 ) === false ? 'N/A' : Afiliado[z].IdHistoria12,
-															checkUndefinedEmpty(typeof Afiliado[z].FechaDesafiliacion== 'undefined'? false :Afiliado[z].FechaDesafiliacion  ) === false ? 'N/A' : Afiliado[z].FechaDesafiliacion,
 															checkUndefinedEmpty(typeof Afiliado[z].IdConyuge== 'undefined'? false :Afiliado[z].IdConyuge  ) === false ? 'N/A' : Afiliado[z].IdConyuge,
 															checkUndefinedEmpty(typeof Afiliado[z].CabezaFamilia== 'undefined'? false : Afiliado[z].CabezaFamilia ) === false ? 'N/A' : Afiliado[z].CabezaFamilia,
 															checkUndefinedEmpty(typeof Afiliado[z].NombreTrabajador== 'undefined'? false :  Afiliado[z].NombreTrabajador) === false ? 'N/A' : Afiliado[z].NombreTrabajador,
 															checkUndefinedEmpty(typeof Afiliado[z].Principal== 'undefined'? false : Afiliado[z].Principal ) === false ? 'N/A' : Afiliado[z].Principal,
 															checkUndefinedEmpty(typeof Afiliado[z].IdBarrio== 'undefined'? false : Afiliado[z].IdBarrio ) === false ? 'N/A' : Afiliado[z].IdBarrio,
-															checkUndefinedEmpty(typeof Afiliado[z].FechaRetiro== 'undefined'? false :  Afiliado[z].FechaRetiro) === false ? 'N/A' : Afiliado[z].FechaRetiro,
 															checkUndefinedEmpty(typeof Afiliado[z].PorcentajeDescuento== 'undefined'? false :Afiliado[z].PorcentajeDescuento  ) === false ? 'N/A' : Afiliado[z].PorcentajeDescuento,
 															checkUndefinedEmpty(typeof Afiliado[z].TipoDescuento== 'undefined'? false : Afiliado[z].TipoDescuento ) === false ? 'N/A' : Afiliado[z].TipoDescuento,
 															checkUndefinedEmpty(typeof Afiliado[z].IdIpsCapita== 'undefined'? false : Afiliado[z].IdIpsCapita ) === false ? 'N/A' : Afiliado[z].IdIpsCapita,
@@ -443,7 +443,10 @@ var Validador = function () {
 																checkUndefinedEmpty(typeof Afiliado[z].SegundoApellido== 'undefined'? false : Afiliado[z].SegundoApellido) === false ? 'N/A' : Afiliado[z].SegundoApellido,
 																checkUndefinedEmpty(typeof Afiliado[z].FechaNacimiento== 'undefined'? false : Afiliado[z].FechaNacimiento) === false ? 'N/A' : Afiliado[z].FechaNacimiento,
 																checkUndefinedEmpty(typeof Afiliado[z].Estrato== 'undefined'? false : Afiliado[z].Estrato ) === false ? 'N/A' : Afiliado[z].Estrato,
-																checkUndefinedEmpty(typeof Afiliado[z].ClaseAfiliacion== 'undefined'? false : Afiliado[z].ClaseAfiliacion ) === false ? 'N/A' : Afiliado[z].ClaseAfiliacion
+																checkUndefinedEmpty(typeof Afiliado[z].ClaseAfiliacion== 'undefined'? false : Afiliado[z].ClaseAfiliacion ) === false ? 'N/A' : Afiliado[z].ClaseAfiliacion,
+																checkUndefinedEmpty(typeof Afiliado[z].FechaAfiliacion== 'undefined'? false :  Afiliado[z].FechaAfiliacion) === false ? 'N/A' : Afiliado[z].FechaAfiliacion,
+																checkUndefinedEmpty(typeof Afiliado[z].FechaDesafiliacion== 'undefined'? false :Afiliado[z].FechaDesafiliacion  ) === false ? 'N/A' : Afiliado[z].FechaDesafiliacion,
+																checkUndefinedEmpty(typeof Afiliado[z].FechaRetiro== 'undefined'? false :  Afiliado[z].FechaRetiro) === false ? 'N/A' : Afiliado[z].FechaRetiro,
 											])
 											.draw()
 											.node();
@@ -466,6 +469,9 @@ var Validador = function () {
 												checkUndefinedEmpty(Afiliado.FechaNacimiento== 'undefined'? false : Afiliado.FechaNacimiento ) === false ? 'N/A' : Afiliado.FechaNacimiento,
 												checkUndefinedEmpty(Afiliado.Estrato== 'undefined'? false :  Afiliado.Estrato) === false ? 'N/A' : Afiliado.Estrato,
 												checkUndefinedEmpty(Afiliado.ClaseAfiliacion== 'undefined'? false :  Afiliado.ClaseAfiliacion) === false ? 'N/A' : Afiliado.ClaseAfiliacion,
+												checkUndefinedEmpty(Afiliado.FechaAfiliacion== 'undefined'? false : Afiliado.FechaAfiliacion ) === false ? 'N/A' : Afiliado.FechaAfiliacion,
+												checkUndefinedEmpty(Afiliado.FechaDesafiliacion== 'undefined'? false : Afiliado.FechaDesafiliacion ) === false ? 'N/A' : Afiliado.FechaDesafiliacion,
+												checkUndefinedEmpty(Afiliado.FechaRetiro== 'undefined'? false :  Afiliado.FechaRetiro) === false ? 'N/A' : Afiliado.FechaRetiro,
 												checkUndefinedEmpty(Afiliado.Sexo== 'undefined'? false :  Afiliado.Sexo) === false ? 'N/A' : Afiliado.Sexo,
 												checkUndefinedEmpty(Afiliado.SedeCapita== 'undefined'? false : Afiliado.SedeCapita ) === false ? 'N/A' : Afiliado.SedeCapita,
 												checkUndefinedEmpty(Afiliado.email== 'undefined'? false :  Afiliado.email) === false ? 'N/A' : Afiliado.email,
@@ -481,7 +487,6 @@ var Validador = function () {
 												checkUndefinedEmpty(Afiliado.IDEmpresa== 'undefined'? false : Afiliado.IDEmpresa ) === false ? 'N/A' : Afiliado.IDEmpresa,
 												checkUndefinedEmpty(Afiliado.TidEmpresa== 'undefined'? false :  Afiliado.TidEmpresa) === false ? 'N/A' : Afiliado.TidEmpresa,
 												checkUndefinedEmpty(Afiliado.TIdAfiliado== 'undefined'? false :  Afiliado.TIdAfiliado) === false ? 'N/A' : Afiliado.TIdAfiliado,
-												checkUndefinedEmpty(Afiliado.FechaAfiliacion== 'undefined'? false : Afiliado.FechaAfiliacion ) === false ? 'N/A' : Afiliado.FechaAfiliacion,
 												checkUndefinedEmpty(Afiliado.Estado== 'undefined'? false : Afiliado.Estado ) === false ? 'N/A' : Afiliado.Estado,
 												checkUndefinedEmpty(Afiliado.IdEntidad== 'undefined'? false :  Afiliado.IdEntidad) === false ? 'N/A' : Afiliado.IdEntidad,
 												checkUndefinedEmpty(Afiliado.Direccion== 'undefined'? false :  Afiliado.Direccion) === false ? 'N/A' : Afiliado.Direccion,
@@ -500,13 +505,11 @@ var Validador = function () {
 												checkUndefinedEmpty(Afiliado.DirEmpresa== 'undefined'? false : Afiliado.DirEmpresa ) === false ? 'N/A' : Afiliado.DirEmpresa,
 												checkUndefinedEmpty(Afiliado.IdHistoria09== 'undefined'? false : Afiliado.IdHistoria09) === false ? 'N/A' : Afiliado.IdHistoria09,
 												checkUndefinedEmpty(Afiliado.IdHistoria12== 'undefined'? false : Afiliado.IdHistoria12 ) === false ? 'N/A' : Afiliado.IdHistoria12,
-												checkUndefinedEmpty(Afiliado.FechaDesafiliacion== 'undefined'? false : Afiliado.FechaDesafiliacion ) === false ? 'N/A' : Afiliado.FechaDesafiliacion,
 												checkUndefinedEmpty(Afiliado.IdConyuge== 'undefined'? false :  Afiliado.IdConyuge) === false ? 'N/A' : Afiliado.IdConyuge,
 												checkUndefinedEmpty(Afiliado.CabezaFamilia== 'undefined'? false : Afiliado.CabezaFamilia ) === false ? 'N/A' : Afiliado.CabezaFamilia,
 												checkUndefinedEmpty(Afiliado.NombreTrabajador== 'undefined'? false :  Afiliado.NombreTrabajador) === false ? 'N/A' : Afiliado.NombreTrabajador,
 												checkUndefinedEmpty(Afiliado.Principal== 'undefined'? false : Afiliado.Principal ) === false ? 'N/A' : Afiliado.Principal,
 												checkUndefinedEmpty(Afiliado.IdBarrio== 'undefined'? false :  Afiliado.IdBarrio) === false ? 'N/A' : Afiliado.IdBarrio,
-												checkUndefinedEmpty(Afiliado.FechaRetiro== 'undefined'? false :  Afiliado.FechaRetiro) === false ? 'N/A' : Afiliado.FechaRetiro,
 												checkUndefinedEmpty(Afiliado.PorcentajeDescuento== 'undefined'? false : Afiliado.PorcentajeDescuento ) === false ? 'N/A' : Afiliado.PorcentajeDescuento,
 												checkUndefinedEmpty(Afiliado.TipoDescuento== 'undefined'? false :  Afiliado.TipoDescuento) === false ? 'N/A' : Afiliado.TipoDescuento,
 												checkUndefinedEmpty(Afiliado.IdIpsCapita== 'undefined'? false : Afiliado.IdIpsCapita ) === false ? 'N/A' : Afiliado.IdIpsCapita,
@@ -525,7 +528,10 @@ var Validador = function () {
 												checkUndefinedEmpty(Afiliado.SegundoApellido== 'undefined'? false : Afiliado.SegundoApellido ) === false ? 'N/A' : Afiliado.SegundoApellido,
 												checkUndefinedEmpty(Afiliado.FechaNacimiento== 'undefined'? false : Afiliado.FechaNacimiento ) === false ? 'N/A' : Afiliado.FechaNacimiento,
 												checkUndefinedEmpty(Afiliado.Estrato== 'undefined'? false :  Afiliado.Estrato) === false ? 'N/A' : Afiliado.Estrato,
-												checkUndefinedEmpty(Afiliado.ClaseAfiliacion== 'undefined'? false :  Afiliado.ClaseAfiliacion) === false ? 'N/A' : Afiliado.ClaseAfiliacion
+												checkUndefinedEmpty(Afiliado.ClaseAfiliacion== 'undefined'? false :  Afiliado.ClaseAfiliacion) === false ? 'N/A' : Afiliado.ClaseAfiliacion,
+												checkUndefinedEmpty(Afiliado.FechaAfiliacion== 'undefined'? false : Afiliado.FechaAfiliacion ) === false ? 'N/A' : Afiliado.FechaAfiliacion,
+												checkUndefinedEmpty(Afiliado.FechaDesafiliacion== 'undefined'? false : Afiliado.FechaDesafiliacion ) === false ? 'N/A' : Afiliado.FechaDesafiliacion,
+												checkUndefinedEmpty(Afiliado.FechaRetiro== 'undefined'? false :  Afiliado.FechaRetiro) === false ? 'N/A' : Afiliado.FechaRetiro,
 										])
 										.draw()
 										.node();
@@ -570,16 +576,16 @@ var Validador = function () {
 									var rowNode = tableGpoFamiliar
 													.row.add([checkUndefinedEmpty(GrupoFamiliar.TipoDocBeneficiario== 'undefined'? false :  GrupoFamiliar.TipoDocBeneficiario) === false ? 'N/A' : GrupoFamiliar.TipoDocBeneficiario, 
 														checkUndefinedEmpty(GrupoFamiliar.IDBeneficiario== 'undefined'? false :  GrupoFamiliar.IDBeneficiario) === false ? 'N/A' : GrupoFamiliar.IDBeneficiario,
-															checkUndefinedEmpty(GrupoFamiliar.Nombre== 'undefined'? false :  GrupoFamiliar.Nombre) === false ? 'N/A' : GrupoFamiliar.Nombre,
-																checkUndefinedEmpty(GrupoFamiliar.PrimerApellido== 'undefined'? false : GrupoFamiliar.PrimerApellido ) === false ? 'N/A' : GrupoFamiliar.PrimerApellido,
-																	checkUndefinedEmpty(GrupoFamiliar.SegundoApellido== 'undefined'? false : GrupoFamiliar.SegundoApellido ) === false ? 'N/A' : GrupoFamiliar.SegundoApellido,
-																		checkUndefinedEmpty(GrupoFamiliar.Sexo== 'undefined'? false : GrupoFamiliar.Sexo ) === false ? 'N/A' : GrupoFamiliar.Sexo,
-																			checkUndefinedEmpty(GrupoFamiliar.TidTrabajador== 'undefined'? false :  GrupoFamiliar.TidTrabajador) === false ? 'N/A' : GrupoFamiliar.TidTrabajador,
-																				checkUndefinedEmpty(GrupoFamiliar.IDTrabajador== 'undefined'? false : GrupoFamiliar.IDTrabajador ) === false ? 'N/A' : GrupoFamiliar.IDTrabajador,
-																					checkUndefinedEmpty(GrupoFamiliar.TipoDocTrabajador== 'undefined'? false : GrupoFamiliar.TipoDocTrabajador ) === false ? 'N/A' : GrupoFamiliar.TipoDocTrabajador,
-																						checkUndefinedEmpty(GrupoFamiliar.EstadoCaja== 'undefined'? false : GrupoFamiliar.EstadoCaja ) === false ? 'N/A' : GrupoFamiliar.EstadoCaja,
-																							checkUndefinedEmpty(GrupoFamiliar.EstadoPOS== 'undefined'? false : GrupoFamiliar.EstadoPOS ) === false ? 'N/A' : GrupoFamiliar.EstadoPOS,
-																								checkUndefinedEmpty(GrupoFamiliar.EstadoPCO== 'undefined'? false :  GrupoFamiliar.EstadoPCO) === false ? 'N/A' : GrupoFamiliar.EstadoPCO
+														checkUndefinedEmpty(GrupoFamiliar.Nombre== 'undefined'? false :  GrupoFamiliar.Nombre) === false ? 'N/A' : GrupoFamiliar.Nombre,
+														checkUndefinedEmpty(GrupoFamiliar.PrimerApellido== 'undefined'? false : GrupoFamiliar.PrimerApellido ) === false ? 'N/A' : GrupoFamiliar.PrimerApellido,
+														checkUndefinedEmpty(GrupoFamiliar.SegundoApellido== 'undefined'? false : GrupoFamiliar.SegundoApellido ) === false ? 'N/A' : GrupoFamiliar.SegundoApellido,
+														checkUndefinedEmpty(GrupoFamiliar.Sexo== 'undefined'? false : GrupoFamiliar.Sexo ) === false ? 'N/A' : GrupoFamiliar.Sexo,
+														checkUndefinedEmpty(GrupoFamiliar.TidTrabajador== 'undefined'? false :  GrupoFamiliar.TidTrabajador) === false ? 'N/A' : GrupoFamiliar.TidTrabajador,
+														checkUndefinedEmpty(GrupoFamiliar.IDTrabajador== 'undefined'? false : GrupoFamiliar.IDTrabajador ) === false ? 'N/A' : GrupoFamiliar.IDTrabajador,
+														checkUndefinedEmpty(GrupoFamiliar.TipoDocTrabajador== 'undefined'? false : GrupoFamiliar.TipoDocTrabajador ) === false ? 'N/A' : GrupoFamiliar.TipoDocTrabajador,
+														checkUndefinedEmpty(GrupoFamiliar.EstadoCaja== 'undefined'? false : GrupoFamiliar.EstadoCaja ) === false ? 'N/A' : GrupoFamiliar.EstadoCaja,
+														checkUndefinedEmpty(GrupoFamiliar.EstadoPOS== 'undefined'? false : GrupoFamiliar.EstadoPOS ) === false ? 'N/A' : GrupoFamiliar.EstadoPOS,
+														checkUndefinedEmpty(GrupoFamiliar.EstadoPCO== 'undefined'? false :  GrupoFamiliar.EstadoPCO) === false ? 'N/A' : GrupoFamiliar.EstadoPCO
 														])
 													.draw()
 													.node();
@@ -596,9 +602,6 @@ var Validador = function () {
 			.fail(function() {
 				////console.log("error");
 			});
-
-
-
 		});
 
 		$("#grupoFamiliarTab").on("click", function(event){
