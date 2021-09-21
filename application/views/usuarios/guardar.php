@@ -10,7 +10,7 @@
       <div class="col-sm-3 col-12 mb-3">
          <div class="mb-3">
             <label class="form-label"> Contraseña <b style="color: #E67F03">(*)</b></label>
-            <input class="form-control" type="password" name="contrasena" required="required" value="<?php echo $contrasena ?>" />
+            <input class="form-control" type="password" name="contrasena" value="<?php echo $contrasena ?>" />
          </div>
       </div>
       <div class="col-sm-3 col-12 mb-3">
@@ -52,8 +52,11 @@
          <input type="date" class="form-control" name="fecha_ingreso" value="<?php echo $fecha_ingreso; ?>" />
       </div>
       <div class="col-sm-3 col-12 mb-3">
-         <label class="form-label"> Tipo </label>
-         <input type="text" class="form-control" name="tipo" value="<?php echo $tipo; ?>" />
+         <label class="form-label">Tipo</label>
+         <select class="form-control" id="estado" name="tipo">
+            <option value="Prestador" selected>Prestador</option>
+            <option value="admin">Administrador</option>																											
+         </select>
       </div>
       <div class="col-sm-3 col-12 mb-3">
          <label class="form-label"> Estado </label>
@@ -61,7 +64,6 @@
             <option value="ACTIVO">ACTIVO</option>
             <option value="INACTIVO">INACTIVO</option>																											
          </select>
-      <!-- <input class="text-uppercase" type="text" name="estado" required="required" value="<?php echo $estado; ?>" /> -->
       </div>
       <div class="col-sm-3 col-12 mb-3">
          <label class="form-label"> Nombre Sede </label>

@@ -1,5 +1,3 @@
-
-
 <p> <a class="btn btn-success" href="<?php echo base_url() ?>index.php/usuarios/guardar"> Crear nuevo usuario </a> </p>
 <?php if (count($usuarios)): ?>
 <br>
@@ -22,15 +20,9 @@
     <thead>
     <tr>
         <th>Identificación</th>
-        <!-- <th> Contraseña </th> -->
         <th>Primer Nombre</th>
-        <!-- <th> Segundo Nombre </th> -->
         <th>Primer Apellido</th>
-        <!-- <th> Segundo Apellido </th> -->
-        <th>Email</th>
-        <!-- <th> Celular </th> -->
-        <!-- <th> Fecha ingreso </th> -->
-        <!-- <th> Tipo </th> -->
+        <th>Email</th>        
         <th>Estado</th>
         <th>Nombre Sed</th>
         <th>&nbsp;</th>
@@ -42,15 +34,9 @@
     <?php foreach($usuarios as $item): ?>
         <tr>
             <td> <?php echo $item->identificacion ?> </td>
-            <!-- <td> <?php echo $item->contrasena ?> </td> -->
             <td> <?php echo $item->pnombre ?> </td>
-            <!-- <td> <?php echo $item->snombre ?> </td> -->
             <td> <?php echo $item->papellido ?> </td>
-            <!-- <td> <?php echo $item->sapellido ?> </td> -->
             <td> <?php echo $item->email ?> </td>
-            <!-- <td> <?php echo $item->celular ?> </td> -->
-            <!-- <td> <?php echo $item->fecha_ingreso ?> </td> -->
-            <!-- <td> <?php echo $item->tipo ?> </td> -->
             <td> <?php echo $item->estado ?> </td>
             <td> <?php echo $item->nombresede ?> </td>
             <td> 

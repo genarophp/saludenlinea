@@ -180,7 +180,7 @@
 											</div>
 										</a>
 										<div class="kt-notification__custom">
-											<a id="cerrar_sesion" href="#" target="_blank" class="btn btn-label-brand btn-sm btn-bold">Cerrar sesión</a>
+											<a href="<?php echo base_url() ?>index.php/login/logout"  class="btn btn-label-brand btn-sm btn-bold">Cerrar sesión</a>
 										</div>
 									</div>
 

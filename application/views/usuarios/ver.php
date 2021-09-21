@@ -2,7 +2,6 @@
     <thead>
         <tr>
             <th> Identificación </th>
-            <th> Contraseña </th>
             <th> Primer Nombre </th>
             <th> Segundo Nombre </th>
             <th> Primer Apellido </th>
@@ -19,7 +18,6 @@
     <tbody>    
         <tr>
             <td> <?php echo $usuario->identificacion ?> </td>
-            <td> <?php echo $usuario->contrasena ?> </td>
             <td> <?php echo $usuario->pnombre ?> </td>
             <td> <?php echo $usuario->snombre ?> </td>
             <td> <?php echo $usuario->papellido ?> </td>

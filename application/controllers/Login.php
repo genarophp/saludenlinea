@@ -32,14 +32,14 @@ class Login extends CI_Controller {
 
 		if ($response) {
 			$userdata = [	"us_identificacion" => $response->identificacion,
-							"nombresede" => $response->nombresede,
-							"us_email" => $response->email,
-							"us_pnombre" => $response->pnombre,
-							"us_snombre" => $response->snombre,
-							"us_papellido" => $response->papellido,
-							"us_sapellido" => $response->sapellido,
-							"us_tipo" => $response->tipo,
-							"login" => TRUE,
+							"nombresede" 		=> $response->nombresede,
+							"us_email" 			=> $response->email,
+							"us_pnombre" 		=> $response->pnombre,
+							"us_snombre" 		=> $response->snombre,
+							"us_papellido"		=> $response->papellido,
+							"us_sapellido" 		=> $response->sapellido,
+							"us_tipo" 			=> $response->tipo,
+							"login" 			=> TRUE,
 						];
 			$this->session->set_userdata($userdata);
 			echo json_encode($this->session->userdata('login'));
@@ -58,11 +58,15 @@ class Login extends CI_Controller {
 		echo json_encode($response);
 	}
 
-
 	public function cerrar()
 	{
 		$this->session->sess_destroy();
 		echo json_encode($this->session->userdata('login'));
+	}
 
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		redirect(site_url("/"));
 	}
 }

@@ -6,13 +6,13 @@ var KTDashboard = function() {
     var handleCloseSession = function () {
 		$("#cerrar_sesion").on('click',function(event) {
             event.preventDefault();
-            //console.info("cerrando session");
+            console.info("cerrando session");
             
             $.ajax({
                 url: '../index.php/login/cerrar'
             })
             .done(function(respuesta) {
-                    //console.info(respuesta);
+                    console.info(respuesta);
                 var resultado = $.parseJSON(respuesta);
                 if (resultado === 'error') {
                     alert("Opps!");

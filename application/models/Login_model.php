@@ -25,7 +25,8 @@ class Login_model extends CI_Model {
                           (usu_usuarios.email = '$usuario' OR usu_usuarios.identificacion = '$usuario') 
                           AND
                            usu_usuarios.contrasena = '$contrasena'
-                           AND usu_usuarios.estado = 'ACTIVO'";
+                           AND usu_usuarios.estado = 'ACTIVO'
+                    ";
             //echo $sql;
             $query = $this->db->conn_id->prepare($sql);
             $query->execute();

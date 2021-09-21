@@ -5,13 +5,15 @@ if (!defined('BASEPATH'))
 class Usuarios extends CI_Controller {
     public function __construct() {
         parent::__construct();
+        $this->load->helper(array('url'));
+        $this->load->model('validadorDeServicios_model');
         $this->form_validation->set_message('required', '%s es obligatorio.');
         $this->form_validation->set_message('numeric', '%s debe ser numérico.');
     }
 
     public function index($flag = 0) {
 
-        if ($this->session->userdata('login')) {
+        if ($this->session->userdata('login') && $this->session->userdata('us_tipo') == 'admin') {
 
             $data = array();
             $this->load->model('user_model');
@@ -38,7 +40,7 @@ class Usuarios extends CI_Controller {
 
     public function ver($id){
 
-        if ($this->session->userdata('login')) {
+        if ($this->session->userdata('login') && $this->session->userdata('us_tipo') == 'admin') {
 
             $data = array();
             $this->load->model('user_model');
@@ -62,7 +64,8 @@ class Usuarios extends CI_Controller {
 
     public function guardar($id=null){
 
-        if ($this->session->userdata('login')) {
+        if ($this->session->userdata('login') && $this->session->userdata('us_tipo') == 'admin') {
+
             $us_pnombre         = $this->session->userdata('us_pnombre');
             $us_papellido       = $this->session->userdata('us_papellido');   
             $us_email           = $this->session->userdata('us_email');   
@@ -74,7 +77,7 @@ class Usuarios extends CI_Controller {
                 $usuario = $this->user_model->obtener_por_id($id); 
                 $data['id']             = $usuario->id;
                 $data['identificacion'] = $usuario->identificacion;
-                $data['contrasena']     = $usuario->contrasena;
+                $data['contrasena']     = '';//$usuario->contrasena;
                 $data['pnombre']        = $usuario->pnombre;
                 $data['snombre']        = $usuario->snombre;
                 $data['papellido']      = $usuario->papellido;
@@ -131,7 +134,9 @@ class Usuarios extends CI_Controller {
             $nombresede         = $this->input->post('nombresede');
 
             $this->form_validation->set_rules('identificacion', 'Identificación', 'required|numeric');
-            $this->form_validation->set_rules('contrasena', 'Contraseña', 'required');
+            if(empty($id)){
+                $this->form_validation->set_rules('contrasena', 'Contraseña', 'required');
+            }            
             $this->form_validation->set_rules('pnombre', 'Primer Nombre', 'required');
             $this->form_validation->set_rules('papellido', 'Primer Apellido', 'required');
             $this->form_validation->set_rules('email', 'Email', 'required');
@@ -157,11 +162,14 @@ class Usuarios extends CI_Controller {
             $flag = 1; 
             redirect('usuarios/index/'.$flag);
 
-            }else{
+            }else{                
                 $data = array();
                 $data['id']             = $id;
                 $data['identificacion'] = $identificacion;
-                $data['contrasena']     = $contrasena;
+                if(!empty($contrasena))
+                {
+                    $data['contrasena'] = $contrasena;
+                }
                 $data['pnombre']        = $pnombre;
                 $data['snombre']        = $snombre;
                 $data['papellido']      = $papellido;
