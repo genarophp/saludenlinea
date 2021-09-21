@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $root1 = "http://".$_SERVER['HTTP_HOST'];
 $root1 = $root1.str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
 $config['base_url'] = "$root1";
-print_r($config);
+//print_r($config);
 
 /*
 |--------------------------------------------------------------------------
