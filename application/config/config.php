@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //$config['base_url'] = '';
 //$config['base_url']='http://localhost:8888/';
 
-$root1 = "http://".$_SERVER['HTTP_HOST'];
+$root1 = "https://".$_SERVER['HTTP_HOST'];
 $root1 = $root1.str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
 $config['base_url'] = "$root1";
 //print_r($config);
