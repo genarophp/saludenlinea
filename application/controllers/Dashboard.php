@@ -21,8 +21,8 @@ class Dashboard extends CI_Controller {
             $us_identificacion  = $this->session->userdata('us_identificacion');  
             
             $this->load->view('dashboard_view',  array('nombre' => $us_pnombre." ".$us_papellido,
-                                                        'email' => $us_email,
-                                                        'identificacion' => $us_identificacion));
+                                                            'email' => $us_email,
+                                                            'identificacion' => $us_identificacion));
 		}else{
 			redirect(site_url(""));
 		}

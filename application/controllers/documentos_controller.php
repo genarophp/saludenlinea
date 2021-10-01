@@ -20,7 +20,7 @@ class Documentos_controller extends CI_Controller {
             $us_email           = $this->session->userdata('us_email');   
             $us_identificacion  = $this->session->userdata('us_identificacion');  
           
-            $this->load->view('documentos_view',  array('nombre'         => $us_pnombre." ".$us_papellido,
+            $this->load->view('Documentos_view',  array('nombre'         => $us_pnombre." ".$us_papellido,
                                                         'email'          => $us_email,
                                                         'identificacion' => $us_identificacion));
         }else{
