@@ -1,43 +1,48 @@
 <?php
-if (!defined('BASEPATH'))
-   exit('No direct script access allowed');
+if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class Usuarios extends CI_Controller {
-    public function __construct() 
+    // public function __construct() 
+    // {
+    //     parent::__construct();
+    //     $this->load->helper(array('url'));
+    //     $this->load->model('User_model');
+    //     $this->form_validation->set_message('required', '%s es obligatorio.');
+    //     $this->form_validation->set_message('numeric', '%s debe ser numérico.');
+    // }
+
+    public function index()
     {
-        parent::__construct();
-        $this->load->helper(array('url'));
-        $this->load->model('validadorDeServicios_model');
-        $this->form_validation->set_message('required', '%s es obligatorio.');
-        $this->form_validation->set_message('numeric', '%s debe ser numérico.');
+        echo('hola');
+        die;
     }
 
-    public function index($flag = 0) {
+    // public function index($flag = 0) {
 
-        if ($this->session->userdata('login') && $this->session->userdata('us_tipo') == 'admin') {
+    //     if ($this->session->userdata('login') && $this->session->userdata('us_tipo') == 'admin') {
 
-            $data = array();
-            $this->load->model('user_model');
-            $data['usuarios'] = $this->user_model->obtener_todos();
+    //         $data = array();
+    //         $this->load->model('user_model');
+    //         $data['usuarios'] = $this->user_model->obtener_todos();
             
-            $us_pnombre         = $this->session->userdata('us_pnombre');
-            $us_papellido       = $this->session->userdata('us_papellido');   
-            $us_email           = $this->session->userdata('us_email');   
-            $us_identificacion  = $this->session->userdata('us_identificacion');
+    //         $us_pnombre         = $this->session->userdata('us_pnombre');
+    //         $us_papellido       = $this->session->userdata('us_papellido');   
+    //         $us_email           = $this->session->userdata('us_email');   
+    //         $us_identificacion  = $this->session->userdata('us_identificacion');
             
             
 
-            $this->load->view('usuarios/header', array( 'nombre'         => $us_pnombre." ".$us_papellido,
-                                                        'email'          => $us_email,
-                                                        'identificacion' => $us_identificacion,
-                                                        'flag'           => $flag,
-                                                    ));
-            $this->load->view('usuarios/index', $data);
-            $this->load->view('usuarios/footer');            
-		}else{
-			redirect(site_url(""));
-		}
-    }
+    //         $this->load->view('usuarios/header', array( 'nombre'         => $us_pnombre." ".$us_papellido,
+    //                                                     'email'          => $us_email,
+    //                                                     'identificacion' => $us_identificacion,
+    //                                                     'flag'           => $flag,
+    //                                                 ));
+    //         $this->load->view('usuarios/index', $data);
+    //         $this->load->view('usuarios/footer');            
+	// 	}else{
+	// 		redirect(site_url(""));
+	// 	}
+    // }
 
     public function ver($id){
 

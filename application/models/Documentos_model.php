@@ -6,7 +6,5 @@ class Documentos_model extends CI_Model {
         parent::__construct();
         $this->db = $this->load->database('default', TRUE); 
     }
-
 }
-
 ?>
