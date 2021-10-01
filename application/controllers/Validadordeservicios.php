@@ -207,7 +207,6 @@ class ValidadorDeServicios extends CI_Controller {
                                                         ));
             $this->load->view('usuarios/guardar', $data);
             $this->load->view('usuarios/footer');
-            redirect('validadordeservicios/ver_usuario/'.$flag);
         }else{
 			redirect(site_url(""));
         }
@@ -256,7 +255,6 @@ class ValidadorDeServicios extends CI_Controller {
                                         $nombresede
                                         );
             $flag = 1; 
-            redirect('validadordeservicios/ver_usuario/'.$flag);
 
             }else{                
                 $data = array();
