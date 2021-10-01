@@ -40,7 +40,7 @@
             <td> <?php echo $item->estado ?> </td>
             <td> <?php echo $item->nombresede ?> </td>
             <td> 
-                <a class="btn btn-info" href="<?php echo base_url() ?>index.php/validadordeservicios/ver_usuarios/<?php echo $item->id ?>"> Ver </a>
+                <a class="btn btn-info" href="<?php echo base_url() ?>index.php/validadordeservicios/ver_usuario/<?php echo $item->id ?>"> Ver </a>
             </td>
             <td> 
                 <a class="btn btn-info" href="<?php echo base_url() ?>index.php/validadordeservicios/guardar/<?php echo $item->id ?>"> Editar </a>
