@@ -54,5 +54,5 @@ $route['404_override']          = 'error404';
 $route['translate_uri_dashes']  = FALSE;
 $route['validadordeservicios']  = 'validadordeservicios/index';
 $route['dashboard']             = 'dashboard/index';
-$route['usuarios']              = 'validadordeservicios/view';
+$route['usuarios']              = 'validadordeservicios/ver';
 $route['documentos']            = 'documentos_controller/index';

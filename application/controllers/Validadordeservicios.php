@@ -107,7 +107,7 @@ class ValidadorDeServicios extends CI_Controller {
     }
 
     /** INICIO MÉTODOS USUARIOS */
-    public function view($flag = 0) {
+    public function ver($flag = 0) {
 
         if ($this->session->userdata('login') && $this->session->userdata('us_tipo') == 'admin') {
 
