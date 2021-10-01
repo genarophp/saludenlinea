@@ -1,4 +1,4 @@
-<p> <a class="btn btn-success" href="<?php echo base_url() ?>index.php/validadordeservicios/guardar"> Crear nuevo usuario </a> </p>
+<p> <a class="btn btn-success" href="<?= site_url('validadordeservicios/guardar'); ?>"> Crear nuevo usuario </a> </p>
 <?php if (count($usuarios)): ?>
 <br>
 <?php if($flag == 0): ?>
