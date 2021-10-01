@@ -104,4 +104,31 @@ class ValidadorDeServicios extends CI_Controller {
        
     }
 
+    public function view($flag = 0) {
+
+        if ($this->session->userdata('login') && $this->session->userdata('us_tipo') == 'admin') {
+
+            $data = array();
+            $this->load->model('user_model');
+            $data['usuarios'] = $this->user_model->obtener_todos();
+            
+            $us_pnombre         = $this->session->userdata('us_pnombre');
+            $us_papellido       = $this->session->userdata('us_papellido');   
+            $us_email           = $this->session->userdata('us_email');   
+            $us_identificacion  = $this->session->userdata('us_identificacion');
+            
+            
+
+            $this->load->view('usuarios/header', array( 'nombre'         => $us_pnombre." ".$us_papellido,
+                                                        'email'          => $us_email,
+                                                        'identificacion' => $us_identificacion,
+                                                        'flag'           => $flag,
+                                                    ));
+            $this->load->view('usuarios/index', $data);
+            $this->load->view('usuarios/footer');            
+		}else{
+			redirect(site_url(""));
+		}
+    }
+
 }
