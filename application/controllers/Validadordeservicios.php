@@ -291,7 +291,7 @@ class ValidadorDeServicios extends CI_Controller {
         $this->user_model->eliminar($id);
          $flag = 2; 
             
-        redirect('usuarios/index/'.$flag);
+        redirect('validadordeservicios/ver_usuario/'.$flag);
         
     }
     /** FIN MÉTODOS USUARIOS */
