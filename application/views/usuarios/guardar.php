@@ -72,7 +72,7 @@
    </div>
       <div class="row">
          <input type="submit" class="btn btn-success" value="Guardar" />
-         <a class="btn btn-danger" href="<?php echo base_url() ?>index.php/usuarios/index"> Cancelar </a>
+         <a class="btn btn-danger" href="<?php echo base_url() ?>index.php/validadordeservicios/view"> Cancelar </a>
       </div>
 </form>
 

@@ -31,4 +31,4 @@
         </tr>
     </tbody>
 </table>
-<div> <a class="btn btn-info" href="<?php echo base_url() ?>index.php/usuarios/index"> Volver atrás </a> </div>
+<div> <a class="btn btn-info" href="<?php echo base_url() ?>index.php/validadordeservicios/view"> Volver atrás </a> </div>

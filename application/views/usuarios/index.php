@@ -40,13 +40,13 @@
             <td> <?php echo $item->estado ?> </td>
             <td> <?php echo $item->nombresede ?> </td>
             <td> 
-                <a class="btn btn-info" href="<?php echo base_url() ?>index.php/usuarios/ver/<?php echo $item->id ?>"> Ver </a>
+                <a class="btn btn-info" href="<?php echo base_url() ?>index.php/validadordeservicios/ver/<?php echo $item->id ?>"> Ver </a>
             </td>
             <td> 
-                <a class="btn btn-info" href="<?php echo base_url() ?>index.php/usuarios/guardar/<?php echo $item->id ?>"> Editar </a>
+                <a class="btn btn-info" href="<?php echo base_url() ?>index.php/validadordeservicios/guardar/<?php echo $item->id ?>"> Editar </a>
             </td>
             <td> 
-                <a class="btn btn-danger eliminar_usuario" href="<?php echo base_url() ?>index.php/usuarios/eliminar/<?php echo $item->id ?>"> Eliminar </a> 
+                <a class="btn btn-danger eliminar_usuario" href="<?php echo base_url() ?>index.php/validadordeservicios/eliminar/<?php echo $item->id ?>"> Eliminar </a> 
             </td>
         </tr>
     <?php endforeach; ?>
