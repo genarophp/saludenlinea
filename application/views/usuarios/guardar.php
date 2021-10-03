@@ -1,4 +1,5 @@
-<form method="post" action="<?php echo base_url() ?>index.php/validadordeservicios/guardar_post/<?php echo $id ?>">
+<!-- <form method="post" action="<?php echo base_url() ?>index.php/validadordeservicios/guardar_post/<?php echo $id ?>"> -->
+<form method="post" action="<?php echo site_url('validadordeservicios/guardar_post/') ?><?php echo $id ?>">
 
    <div class="row">
       <div class="col-sm-3 col-12 mb-3">
