@@ -55,4 +55,4 @@ $route['translate_uri_dashes']  = FALSE;
 $route['validadordeservicios']  = 'validadordeservicios/index';
 $route['dashboard']             = 'dashboard/index';
 $route['usuarios']              = 'validadordeservicios/ver_usuario';
-$route['documentos']            = 'documentos_controller/index';
+$route['documentos']            = 'validadordeservicios/verdocumentos';

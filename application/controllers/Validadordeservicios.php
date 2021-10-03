@@ -294,4 +294,23 @@ class ValidadorDeServicios extends CI_Controller {
     }
     /** FIN MÉTODOS USUARIOS */
 
+    /** INICIO MÉTODOS DOCUMENTOS */
+    public function verdocumentos()
+	{	
+        if ($this->session->userdata('login')) {
+
+            $us_pnombre         = $this->session->userdata('us_pnombre');
+            $us_papellido       = $this->session->userdata('us_papellido');   
+            $us_email           = $this->session->userdata('us_email');   
+            $us_identificacion  = $this->session->userdata('us_identificacion');  
+          
+            $this->load->view('Documentos_view',  array('nombre'         => $us_pnombre." ".$us_papellido,
+                                                        'email'          => $us_email,
+                                                        'identificacion' => $us_identificacion));
+        }else{
+            redirect(site_url(""));
+        }
+    }
+    /** FIN MÉTODOS DOCUMENTOS */
+
 }
