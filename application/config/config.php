@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 //$config['base_url'] = '';
-$config['base_url']='https://cygcolombia.com';
+$config['base_url']='https://cygcolombia.com/saludenlinea/';
 
 // $root1 = "https://".$_SERVER['HTTP_HOST'];
 // $root1 = $root1.str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
