@@ -254,8 +254,8 @@ class ValidadorDeServicios extends CI_Controller {
                                         $estado,
                                         $nombresede
                                         );
-            $flag = 1; 
-
+            $flag = 1;
+            redirect('validadordeservicios/ver_usuario/'.$flag);
             }else{                
                 $data = array();
                 $data['id']             = $id;
