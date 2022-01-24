@@ -331,32 +331,47 @@ var Validador = function () {
 								var hoy = year+''+month+''+day
 							  }								
 							
+							// console.error(hoy);
 							//Validación para personas en periodo de protección laboral
-							if(Afiliado.EstadoDescripcion == 'Retirado' && Afiliado.FechaRetiro >= hoy && hoy <= Afiliado.FechaRetiro)
-							  												//30/10/2021 >= 20/09/2021   		20/09/2021 <= 30/11/2021		
-							{
-								//Valida que el encuentre ael afiliado está en periodo de Proteción Laboral						
-									var mens = 'PROTECCIÓN LABORAL';
+							if(typeof Afiliado!== 'undefined'){
+								if(Afiliado.EstadoDescripcion == 'Retirado' && Afiliado.FechaRetiro >= hoy && hoy <= Afiliado.FechaRetiro)
+																				//30/10/2021 >= 20/09/2021   		20/09/2021 <= 30/11/2021		
+								{
+									//Valida que el encuentre ael afiliado está en periodo de Proteción Laboral						
+										var mens = 'PROTECCIÓN LABORAL';
+										var rowNode = tableValidadorServicios
+										.row.add([checkUndefinedEmpty(typeof Derechos.DerechoPrestacion== 'undefined'? false : Derechos.DerechoPrestacion ) === false ? 'N/A' : 'PROTECCION_LABORAL',
+												checkUndefinedEmpty(typeof Derechos.Programa== 'undefined'? false : Derechos.Programa ) === false ? 'N/A' : Derechos.Programa,
+												checkUndefinedEmpty(typeof Derechos.DescripcionPrograma== 'undefined'? false : Derechos.DescripcionPrograma ) === false ? 'N/A' : Derechos.DescripcionPrograma,
+												checkUndefinedEmpty(typeof Derechos.MENSAJE== 'undefined'? false : Derechos.MENSAJE ) === false ? 'N/A' : 'El usuario con tipo ' + Afiliado.TipoDocAfiliado + ' y numero ' + Afiliado.IdAfiliado + ' SI tiene derecho a prestación de servicios, por Periodo de protección laboral hasta el ' + Afiliado.FechaRetiro])
+										.draw()
+										.node();
+								}
+								else if(Afiliado.EstadoDescripcion == 'Retirado' && Afiliado.FechaRetiro < hoy){
+									//Valida terminación de protección laboral						
+									var mens = 'NO';
 									var rowNode = tableValidadorServicios
-									.row.add([checkUndefinedEmpty(typeof Derechos.DerechoPrestacion== 'undefined'? false : Derechos.DerechoPrestacion ) === false ? 'N/A' : 'PROTECCION_LABORAL',
-											  checkUndefinedEmpty(typeof Derechos.Programa== 'undefined'? false : Derechos.Programa ) === false ? 'N/A' : Derechos.Programa,
-											  checkUndefinedEmpty(typeof Derechos.DescripcionPrograma== 'undefined'? false : Derechos.DescripcionPrograma ) === false ? 'N/A' : Derechos.DescripcionPrograma,
-											  checkUndefinedEmpty(typeof Derechos.MENSAJE== 'undefined'? false : Derechos.MENSAJE ) === false ? 'N/A' : 'El usuario con tipo ' + Afiliado.TipoDocAfiliado + ' y numero ' + Afiliado.IDTrabajador + ' SI tiene derecho a prestación de servicios, por Periodo de protección laboral hasta el ' + Afiliado.FechaRetiro])
+									.row.add([checkUndefinedEmpty(typeof Derechos.DerechoPrestacion== 'undefined'? false : Derechos.DerechoPrestacion ) === false ? 'N/A' : 'NO',
+											checkUndefinedEmpty(typeof Derechos.Programa== 'undefined'? false : Derechos.Programa ) === false ? 'N/A' : Derechos.Programa,
+											checkUndefinedEmpty(typeof Derechos.DescripcionPrograma== 'undefined'? false : Derechos.DescripcionPrograma ) === false ? 'N/A' : Derechos.DescripcionPrograma,
+											checkUndefinedEmpty(typeof Derechos.MENSAJE== 'undefined'? false : Derechos.MENSAJE ) === false ? 'N/A' : 'El usuario con tipo ' + Afiliado.TipoDocAfiliado + ' y numero ' + Afiliado.IdAfiliado + ' NO tiene derecho a prestación de servicios, finalizó Periodo de protección laboral el ' + Afiliado.FechaRetiro])
 									.draw()
 									.node();
+								}
+								
+								//Si no está en periodo de protección laboral
+								else{
+									//Valida que se encuentre al Afiliado de Comfenalco
+										var rowNode = tableValidadorServicios
+										.row.add([checkUndefinedEmpty(typeof Derechos.DerechoPrestacion== 'undefined'? false : Derechos.DerechoPrestacion ) === false ? 'N/A' : Derechos.DerechoPrestacion,
+												checkUndefinedEmpty(typeof Derechos.Programa== 'undefined'? false : Derechos.Programa ) === false ? 'N/A' : Derechos.Programa,
+												checkUndefinedEmpty(typeof Derechos.DescripcionPrograma== 'undefined'? false : Derechos.DescripcionPrograma ) === false ? 'N/A' : Derechos.DescripcionPrograma,
+												checkUndefinedEmpty(typeof Derechos.MENSAJE== 'undefined'? false : Derechos.MENSAJE ) === false ? 'N/A' : Derechos.MENSAJE])
+										.draw()
+										.node();
+								};
 							}
-							else if(Afiliado.EstadoDescripcion == 'Retirado' && Afiliado.FechaRetiro < hoy){
-								//Valida terminación de protección laboral						
-								var mens = 'NO';
-								var rowNode = tableValidadorServicios
-								.row.add([checkUndefinedEmpty(typeof Derechos.DerechoPrestacion== 'undefined'? false : Derechos.DerechoPrestacion ) === false ? 'N/A' : 'NO',
-										  checkUndefinedEmpty(typeof Derechos.Programa== 'undefined'? false : Derechos.Programa ) === false ? 'N/A' : Derechos.Programa,
-										  checkUndefinedEmpty(typeof Derechos.DescripcionPrograma== 'undefined'? false : Derechos.DescripcionPrograma ) === false ? 'N/A' : Derechos.DescripcionPrograma,
-										  checkUndefinedEmpty(typeof Derechos.MENSAJE== 'undefined'? false : Derechos.MENSAJE ) === false ? 'N/A' : 'El usuario con tipo ' + Afiliado.TipoDocAfiliado + ' y numero ' + Afiliado.IDTrabajador + ' NO tiene derecho a prestación de servicios, finalizó Periodo de protección laboral el ' + Afiliado.FechaRetiro])
-								.draw()
-								.node();
-							}
-							//Si no está en periodo de protección laboral
+							//Si la variable Afiliado esta undefined
 							else{
 								//Valida que se encuentre al Afiliado de Comfenalco
 									var rowNode = tableValidadorServicios
@@ -453,7 +468,9 @@ var Validador = function () {
 										break;
 									}
 								}
-							}else if(Afiliado.IDTrabajador !== 'undefined' ){
+							}
+							else if (typeof Afiliado  !== 'undefined'){
+								if(typeof Afiliado.IDTrabajador !== 'undefined' ){
 								$("#estadoAfil").text("1) Estado: "+Afiliado.EstadoDescripcion);
 								$("#claseAfil").text("2) Clase AFiliado: "+Afiliado.ClaseAfiliacion);
 								$("#nivelAfil").text("3) Nivel: "+Afiliado.Estrato);
@@ -536,8 +553,8 @@ var Validador = function () {
 										.draw()
 										.node();
 								}
-							}						
-
+								}						
+							}
 							var SedeAtencion = resultado.responseMessageOut.body.response.validadorResponse.DsSede.SedeAtencion;
 						
 								var rowNode = tableSede

@@ -48,7 +48,7 @@ var KTLoginV1 = function () {
 				data: cadena
 			})
 			.done(function(respuesta) {
-				
+				try {
 				var resultado = $.parseJSON(respuesta);
 				if (resultado === 'error') {
 					
@@ -68,6 +68,18 @@ var KTLoginV1 = function () {
 					console.log(resultado);
 					$(location).attr('href',"index.php/validadordeservicios");
 				}
+			}catch (error) {
+				Swal.fire({
+					title: "Datos incorrectos",
+					text: "Verifica el usuario y contraseña e intenta nuevamente.",
+					type: "warning",
+					showConfirmButton: true
+				  });
+				  
+			  btn.removeClass('kt-loader kt-loader--right kt-loader--light').attr('disabled', false);
+			  showErrorMsg(form, 'danger', 'Usuario o Contraseña Incorrecta.');
+			}
+			
 	
 			})
 			.fail(function() {

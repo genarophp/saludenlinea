@@ -96,6 +96,8 @@ class ValidadorDeServicios extends CI_Controller {
                 curl_setopt($process, CURLOPT_POSTFIELDS, $payload);
                 curl_setopt($process, CURLOPT_ENCODING, "UTF-8" );
                 curl_setopt($process, CURLOPT_RETURNTRANSFER, TRUE);
+                curl_setopt($process, CURLOPT_SSL_VERIFYHOST, 0);
+                curl_setopt($process, CURLOPT_SSL_VERIFYPEER, 0);
                 $return = curl_exec($process);
                 curl_close($process);
             

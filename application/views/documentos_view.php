@@ -246,7 +246,7 @@
 														  solicitando creación de usuario en la aplicación Salud en Línea.<br><br>
 
 														2.	Con el número de <b>SIRES</b> arrojado por el sistema, se debe diligenciar el formato <b>FTO-GTC-OTE-06 V1 Accesos al Sistema EPS.xls</b> 
-															con firma escaneada y enviarlo al área de  Contrataciones (<b>paguerreoa@epscomfenalcovalle.com.co</b>) para validar contratación 
+															con firma escaneada y enviarlo al área de  Contrataciones (<b>paguerreroa@epscomfenalcovalle.com.co</b>) para validar contratación 
 															vigente con el Prestador, Call center o empresa que preste servicios a EPS Comfenalco Valle.<br><br>
 
 														3.	Si Contrataciones no aprueba, se debe notificar a  Grupo de Soporte Tecnológico (<b>tecnologia@epscomfenalcovalle.com.co</b>) para atención del SIRES.<br><br>

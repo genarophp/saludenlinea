@@ -44,6 +44,7 @@ class Login extends CI_Controller {
 			$this->session->set_userdata($userdata);
 			echo json_encode($this->session->userdata('login'));
 		}else{
+			echo json_encode($this->session->userdata('login'));
 			echo json_encode('error');
 		}
 	}
